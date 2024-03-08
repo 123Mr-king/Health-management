@@ -1,12 +1,9 @@
 package com.sports.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.sports.common.Const;
 import com.sports.common.ServerResponse;
-import com.sports.entity.User;
 import com.sports.exception.UserException;
 import com.sports.service.AdminUserService;
-import com.sports.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -26,8 +23,6 @@ public class AdminController {
     @Autowired
     AdminUserService adminUserService;
 
-    @Autowired
-    private UserService userService;
     /**
      * 管理员登录
      */
@@ -42,6 +37,7 @@ public class AdminController {
         }
         return response;
     }
+
     /**
      * 登出
      *
@@ -52,6 +48,7 @@ public class AdminController {
         session.removeAttribute(Const.CURRENT_USER);
         return ServerResponse.createBySuccess();
     }
+
     /**
      * 用户管理——删除用户
      */

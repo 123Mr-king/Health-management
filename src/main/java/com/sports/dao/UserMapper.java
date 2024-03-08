@@ -18,8 +18,13 @@ public interface UserMapper {
 
     int updateByPrimaryKey(User record);
 
-    //检测用户名和密码是否匹配
+    /**
+     * 检测用户名和密码是否匹配
+     */
     User selectLogin(@Param("userName") String userName, @Param("userPassword") String userPassword);
-    //检测数据库中是否存在该用户名
+
+    /**
+     * 检测数据库中是否存在该用户名
+     */
     int checkUsername(String userName);
 }

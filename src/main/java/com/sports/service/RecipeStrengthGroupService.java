@@ -3,9 +3,7 @@ package com.sports.service;
 import com.sports.common.ServerResponse;
 import com.sports.entity.RecipeStrengthGroup;
 
-/**
- *
- */
+
 public interface RecipeStrengthGroupService {
 
     /**

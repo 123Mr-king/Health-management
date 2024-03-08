@@ -2,16 +2,11 @@ package com.sports.controller;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.sports.common.ServerResponse;
-import com.sports.dao.RunDataMapper;
-import com.sports.exception.DiseaseException;
 import com.sports.exception.RunDataException;
 import com.sports.service.impl.RunDataServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-
-import javax.xml.ws.Response;
 
 
 @RestController

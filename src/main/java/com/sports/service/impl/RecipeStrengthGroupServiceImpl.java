@@ -12,11 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @Author: xuxiaobo
- * @Date: 2020/11/12 15:09
- * 好好学习，天天向上
- */
 
 @Service("RecipeStrengthGroupService")
 public class RecipeStrengthGroupServiceImpl implements RecipeStrengthGroupService {

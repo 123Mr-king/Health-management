@@ -57,7 +57,6 @@ public class FatigueDegreeController {
      * 疲劳度等级的修改
      * 先查 后改
      */
-
     @RequestMapping(value = "selectById.do", method = RequestMethod.POST)
     @Transactional(rollbackFor = FatigueDegreeException.class)
     @ResponseBody

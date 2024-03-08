@@ -1,5 +1,8 @@
 package com.sports.common;
 
+/**
+ * 相应码
+ */
 public enum ResponseCode {
 
     SUCCESS(1, "登录成功"),

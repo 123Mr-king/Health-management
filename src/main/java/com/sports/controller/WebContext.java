@@ -1,15 +1,11 @@
 package com.sports.controller;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
-import com.sports.common.ResponseCode;
-import com.sports.common.ServerResponse;
-import com.sports.entity.User;
-import com.sports.exception.UserException;
-import org.apache.jena.atlas.json.JSON;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/web/")

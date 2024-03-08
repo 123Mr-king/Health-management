@@ -7,17 +7,19 @@ import java.io.Serializable;
 
 /**
  * 高复用的可响应对象
+ * 保证序列化json的时候，如果是null的对象，key也会消失
  * @param <T>
  */
-@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
-// 保证序列化json的时候，如果是null的对象，key也会消失
+@JsonSerialize
 public class ServerResponse<T> implements Serializable {
 
     private int status;
     private String msg;
     private T data;
 
-    // 将所有的构造器方法设置为私有的方法，使外部不能通过构造方法来new该对象，而向外部提供pulbic的方法调用
+    /**
+     *  将所有的构造器方法设置为私有的方法，使外部不能通过构造方法来new该对象，而向外部提供pulbic的方法调用
+     */
     public ServerResponse(int status) {
         this.status = status;
     }
@@ -52,8 +54,11 @@ public class ServerResponse<T> implements Serializable {
         this.msg = responseCode.getDesc();
         this.data = data;
     }
+
+    /**
+     * 忽略序列化
+     */
     @JsonIgnore
-    //使之不在json序列化之中
     public boolean isSuccess() {
         return this.status == ResponseCode.SUCCESS.getCode();
     }

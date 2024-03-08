@@ -31,7 +31,6 @@ public class EquipmentController {
         if(!file.isEmpty()) {
             BASE64Encoder encoder = new BASE64Encoder();
             String image = encoder.encode(file.getBytes());
-//            SportEquipment sportEquipment = new SportEquipment();
             sportEquipment.setEquipmentName(sportEquipment.getEquipmentName());
             sportEquipment.setEquipmentDescription(sportEquipment.getEquipmentDescription());
             sportEquipment.setEquipmentImage(image);
@@ -88,9 +87,6 @@ public class EquipmentController {
     /**
      * 器材图片的展示
      */
-//    @RequestMapping(value = "getImage.do",method = RequestMethod.GET)
-//    @Transactional(rollbackFor = EquipmentException.class)
-//    @ResponseBody
     @GetMapping("getImage.do")
     public void getImage(@RequestParam("id") Integer id, HttpServletResponse response) throws Exception{
         equipmentService.getImage(id,response);

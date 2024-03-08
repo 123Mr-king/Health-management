@@ -58,6 +58,7 @@ public class CourseController {
     public ServerResponse selectCourseByType(Course course) throws Exception{
         return courseService.selectByType(course);
     }
+
     /**
      *  根据id 获取视频url
      * @param course

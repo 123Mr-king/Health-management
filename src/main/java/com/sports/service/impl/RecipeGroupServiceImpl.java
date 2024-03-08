@@ -13,12 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @Author：xuxiaobo
- * @Date:2020/10/28 10:41
- * 好好学习，天天向上
- */
-
 @Service("RecipeGroupService")
 public class RecipeGroupServiceImpl implements RecipeGroupService {
 

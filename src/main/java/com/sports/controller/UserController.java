@@ -1,11 +1,9 @@
 package com.sports.controller;
 
 import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.sports.common.Const;
 import com.sports.common.ResponseCode;
 import com.sports.common.ServerResponse;
-import com.sports.entity.SportsEffect;
 import com.sports.entity.User;
 import com.sports.exception.UserException;
 import com.sports.service.UserService;
@@ -33,7 +31,7 @@ public class UserController {
         if (user == null){
             throw new UserException(ResponseCode.PARAM_IS_INVALID);
         }
-        System.out.println(user.toString());
+        System.out.println(user);
         return userService.register(user);
     }
 
@@ -89,6 +87,7 @@ public class UserController {
         }
         return response;
     }
+
     /**
      * 返回给前台下拉框数据
      */
@@ -99,6 +98,7 @@ public class UserController {
         JSONArray jsonArray = userService.goalList();
         return jsonArray;
     }
+
     @RequestMapping(value = "interestList.do",method = RequestMethod.GET)
     @Transactional(rollbackFor = UserException.class)
     @ResponseBody
@@ -106,6 +106,7 @@ public class UserController {
         JSONArray jsonArray = userService.interestList();
         return jsonArray;
     }
+
     @RequestMapping(value = "equipmentList.do",method = RequestMethod.GET)
     @Transactional(rollbackFor = UserException.class)
     @ResponseBody

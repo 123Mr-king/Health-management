@@ -6,11 +6,6 @@ import com.sports.service.RecipeStrengthGroupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * @Author: xuxiaobo
- * @Date: 2020/11/12 15:10
- * 好好学习，天天向上
- */
 
 @RestController
 @RequestMapping("/recipeStrength/")

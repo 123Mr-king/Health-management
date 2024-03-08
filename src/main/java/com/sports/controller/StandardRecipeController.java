@@ -2,20 +2,16 @@ package com.sports.controller;
 
 import com.alibaba.fastjson.JSONArray;
 import com.sports.Vo.StandarRecipeVo2;
-import com.sports.common.Const;
 import com.sports.common.ServerResponse;
 import com.sports.entity.SportsIntensityStandard;
 import com.sports.entity.StandardRecipe;
 import com.sports.exception.StandardRecipeException;
-import com.sports.service.StandardRecipeService;
 import com.sports.service.impl.StandardRecipeServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
-import java.util.HashMap;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/standardRecipe/")
@@ -77,6 +73,7 @@ public class StandardRecipeController {
     public void addSR(StandardRecipe standardRecipe){
         standardRecipeService.deleteSR1(standardRecipe);
     }
+
     /**
      * 处方的修改 step1
      */
@@ -102,9 +99,6 @@ public class StandardRecipeController {
     /**
      * 运动效果的回显
      */
-
-    // 运动效果 回显给前端 前端给我id
-
     @RequestMapping(value = "goalList.do",method = RequestMethod.GET)
     @Transactional(rollbackFor = StandardRecipeException.class)
     @ResponseBody
@@ -113,8 +107,9 @@ public class StandardRecipeController {
         return jsonArray;
     }
 
-    //类型
-
+    /**
+     * 类型
+     */
     @RequestMapping(value = "interestList.do",method = RequestMethod.GET)
     @Transactional(rollbackFor = StandardRecipeException.class)
     @ResponseBody
@@ -123,7 +118,9 @@ public class StandardRecipeController {
         return jsonArray;
     }
 
-    //器材
+    /**
+     * 器材
+     */
     @RequestMapping(value = "equipmentList.do",method = RequestMethod.GET)
     @Transactional(rollbackFor = StandardRecipeException.class)
     @ResponseBody
@@ -131,8 +128,10 @@ public class StandardRecipeController {
         JSONArray jsonArray = standardRecipeService.equipmentiList();
         return jsonArray;
     }
-    //疲劳度等级
 
+    /**
+     * 疲劳度等级
+     */
     @RequestMapping(value = "fatigueList.do",method = RequestMethod.GET)
     @Transactional(rollbackFor = StandardRecipeException.class)
     @ResponseBody
@@ -140,8 +139,10 @@ public class StandardRecipeController {
         JSONArray jsonArray = standardRecipeService.fatigueList();
         return jsonArray;
     }
-    //禁忌疾病等级
 
+    /**
+     * 禁忌疾病等级
+     */
     @RequestMapping(value = "diseaseList.do",method = RequestMethod.GET)
     @Transactional(rollbackFor = StandardRecipeException.class)
     @ResponseBody

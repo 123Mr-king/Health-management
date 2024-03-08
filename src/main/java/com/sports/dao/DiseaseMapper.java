@@ -1,0 +1,41 @@
+package com.sports.dao;
+
+import com.sports.entity.Disease;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+
+@Mapper
+public interface DiseaseMapper {
+    int deleteByPrimaryKey(Integer id);
+
+    int insert(Disease record);
+
+    int insertSelective(Disease record);
+
+    Disease selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKeySelective(Disease record);
+
+    int updateByPrimaryKey(Disease record);
+
+    List<Disease> selectName();
+
+    Disease selectGetName(Integer id);
+
+    /**
+     * 查询
+     * @return
+     */
+    List<Disease> selectAll();
+
+    List<Disease> selectByName(@Param("name") String name);
+
+    /**
+     * 校验 name不允许重复
+     * @param DiseaseName
+     * @return
+     */
+    int checkDiseaseName(String DiseaseName);
+}

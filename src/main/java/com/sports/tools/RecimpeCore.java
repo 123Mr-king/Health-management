@@ -1,7 +1,11 @@
 package com.sports.tools;
 
+import com.sports.common.Constants;
 import com.sports.entity.UserTizhi;
 
+/**
+ * @author 小王小王 混世魔王
+ */
 public class RecimpeCore {
 
     String objective;
@@ -12,25 +16,25 @@ public class RecimpeCore {
        this.userTizhi=userTizhi;
     }
     public String getSportway() {
-        if ("减脂瘦身".equals(objective)) {
+        if (Constants.loseWeight.equals(objective)) {
             return "有氧运动";
         }
-        if ("增肌".equals(objective)) {
+        if (Constants.gainMuscle.equals(objective)) {
             return "无氧运动";
         }
-        if ("增强心肺能力".equals(objective)) {
+        if (Constants.IncCardiopulmonary.equals(objective)) {
             return "有氧运动";
         }
-        if ("增强有氧耐力".equals(objective)) {
+        if (Constants.IncAerobicEndurance.equals(objective)) {
             return "有氧运动";
         }
-        if ("增强无氧耐力".equals(objective)) {
+        if (Constants.IncAnaerobicTolerance.equals(objective)) {
             return "无氧运动";
         }
-        if ("强身健体".equals(objective)) {
+        if (Constants.buildBody.equals(objective)) {
             return "有氧运动";
         }
-        if ("缓解亚健康".equals(objective)) {
+        if (Constants.alleviatingSubHealth.equals(objective)) {
             return "娱乐运动";
         }
         return "";
@@ -38,83 +42,83 @@ public class RecimpeCore {
 
     public int getSportStrength() {
         int strengthnum = 0, num = 0;
-        if ("减脂瘦身".equals(objective) && userTizhi.getPhysique() < 2) {
+        if (Constants.loseWeight.equals(objective) && userTizhi.getPhysique() < 2) {
             strengthnum = 2;
             num++;
         }
-        if ("减脂瘦身".equals(objective) && userTizhi.getPhysique() >= 2) {
+        if (Constants.loseWeight.equals(objective) && userTizhi.getPhysique() >= 2) {
             strengthnum = 3;
             num++;
         }
-        if ("减脂瘦身".equals(objective) && userTizhi.getHeartLungAbility() < 2) {
+        if (Constants.loseWeight.equals(objective) && userTizhi.getHeartLungAbility() < 2) {
             strengthnum += 2;
             num++;
         }
-        if ("减脂瘦身".equals(objective) && userTizhi.getHeartLungAbility() >= 2) {
+        if (Constants.loseWeight.equals(objective) && userTizhi.getHeartLungAbility() >= 2) {
             strengthnum += 3;
             num++;
         }
-        if ("增肌".equals(objective) && userTizhi.getHeartLungAbility() < 3) {
+        if (Constants.gainMuscle.equals(objective) && userTizhi.getHeartLungAbility() < 3) {
             strengthnum += 4;
             num++;
         }
-        if ("增肌".equals(objective) && userTizhi.getHeartLungAbility() >= 3) {
+        if (Constants.gainMuscle.equals(objective) && userTizhi.getHeartLungAbility() >= 3) {
             strengthnum += 5;
             num++;
         }
-        if ("增肌".equals(objective) && userTizhi.getMuscularEndurance() < 3) {
+        if (Constants.gainMuscle.equals(objective) && userTizhi.getMuscularEndurance() < 3) {
             strengthnum += 4;
             num++;
         }
-        if ("增肌".equals(objective) && userTizhi.getMuscularEndurance() >= 3) {
+        if (Constants.gainMuscle.equals(objective) && userTizhi.getMuscularEndurance() >= 3) {
             strengthnum += 5;
             num++;
         }
-        if ("增肌".equals(objective) && userTizhi.getPhysique() < 3) {
+        if (Constants.gainMuscle.equals(objective) && userTizhi.getPhysique() < 3) {
             strengthnum += 4;
             num++;
         }
-        if ("增肌".equals(objective) && userTizhi.getPhysique() >= 3) {
+        if (Constants.gainMuscle.equals(objective) && userTizhi.getPhysique() >= 3) {
             strengthnum += 5;
             num++;
         }
-        if ("增肌".equals(objective) && userTizhi.getWithinFat() == 3) {
+        if (Constants.gainMuscle.equals(objective) && userTizhi.getWithinFat() == 3) {
             strengthnum += 3;
             num++;
         }
-        if ("增肌".equals(objective) && userTizhi.getWithinFat() == 2) {
+        if (Constants.gainMuscle.equals(objective) && userTizhi.getWithinFat() == 2) {
             strengthnum += 4;
             num++;
         }
-        if ("增肌".equals(objective) && userTizhi.getWithinFat() == 1) {
+        if (Constants.gainMuscle.equals(objective) && userTizhi.getWithinFat() == 1) {
             strengthnum += 5;
             num++;
         }
-        if ("增强心肺能力".equals(objective) && userTizhi.getHeartLungAbility() < 2) {
+        if (Constants.IncCardiopulmonary.equals(objective) && userTizhi.getHeartLungAbility() < 2) {
             strengthnum = 2;
             num++;
         }
-        if ("增强心肺能力".equals(objective) && userTizhi.getHeartLungAbility() >= 2) {
+        if (Constants.IncCardiopulmonary.equals(objective) && userTizhi.getHeartLungAbility() >= 2) {
             strengthnum = 3;
             num++;
         }
-        if ("增强心肺能力".equals(objective) && userTizhi.getPhysique() < 2) {
+        if (Constants.IncCardiopulmonary.equals(objective) && userTizhi.getPhysique() < 2) {
             strengthnum += 2;
             num++;
         }
-        if ("增强心肺能力".equals(objective) && userTizhi.getPhysique() >= 2) {
+        if (Constants.IncCardiopulmonary.equals(objective) && userTizhi.getPhysique() >= 2) {
             strengthnum += 3;
             num++;
         }
-        if ("增强心肺能力".equals(objective) && userTizhi.getWithinFat() < 3) {
+        if (Constants.IncCardiopulmonary.equals(objective) && userTizhi.getWithinFat() < 3) {
             strengthnum += 3;
             num++;
         }
-        if ("增强心肺能力".equals(objective) && userTizhi.getPhysique() >= 3) {
+        if (Constants.IncCardiopulmonary.equals(objective) && userTizhi.getPhysique() >= 3) {
             strengthnum += 2;
             num++;
         }
-        if ("强身健体".equals(objective)) {
+        if (Constants.buildBody.equals(objective)) {
             if (userTizhi.getWithinFat() == 3) {
                 if (userTizhi.getPhysique() < 2) {
                     strengthnum = 2;
@@ -160,7 +164,7 @@ public class RecimpeCore {
                     }
 
                 } else {
-                    if ("肥胖".equals(userTizhi.getPhysique())) {
+                    if (Constants.fat.equals(userTizhi.getPhysique())) {
                         if (userTizhi.getPhysique() < 2) {
                             strengthnum = 2;
                             num++;
@@ -185,68 +189,68 @@ public class RecimpeCore {
             }
         }
 
-        if ("增强有氧耐力".equals(objective) && userTizhi.getPhysique() < 3) {
+        if (Constants.IncAerobicEndurance.equals(objective) && userTizhi.getPhysique() < 3) {
             strengthnum = 3;
             num++;
         }
-        if ("增强有氧耐力".equals(objective) && userTizhi.getPhysique() >= 3) {
+        if (Constants.IncAerobicEndurance.equals(objective) && userTizhi.getPhysique() >= 3) {
             strengthnum = 4;
             num++;
         }
-        if ("增强有氧耐力".equals(objective) && userTizhi.getHeartLungAbility() < 2) {
+        if (Constants.IncAerobicEndurance.equals(objective) && userTizhi.getHeartLungAbility() < 2) {
             strengthnum += 3;
             num++;
         }
-        if ("增强有氧耐力".equals(objective) && userTizhi.getHeartLungAbility() >= 2) {
+        if (Constants.IncAerobicEndurance.equals(objective) && userTizhi.getHeartLungAbility() >= 2) {
             strengthnum += 4;
             num++;
         }
 
-        if ("增强无氧耐力".equals(objective) && userTizhi.getPhysique() < 4) {
+        if (Constants.IncAnaerobicTolerance.equals(objective) && userTizhi.getPhysique() < 4) {
             strengthnum = 4;
             num++;
         }
-        if (objective.equals("增强无氧耐力") && userTizhi.getPhysique() >= 4) {
+        if (Constants.IncAnaerobicTolerance.equals(objective) && userTizhi.getPhysique() >= 4) {
             strengthnum = 5;
             num++;
         }
-        if (objective.equals("增强无氧耐力") && userTizhi.getHeartLungAbility() < 4) {
+        if (Constants.IncAnaerobicTolerance.equals(objective) && userTizhi.getHeartLungAbility() < 4) {
             strengthnum += 4;
             num++;
         }
-        if (objective.equals("增强无氧耐力") && userTizhi.getHeartLungAbility() >= 4) {
+        if (Constants.IncAnaerobicTolerance.equals(objective) && userTizhi.getHeartLungAbility() >= 4) {
             strengthnum += 5;
             num++;
         }
-        if (objective.equals("增强无氧耐力") && userTizhi.getMuscularEndurance() < 4) {
+        if (Constants.IncAnaerobicTolerance.equals(objective) && userTizhi.getMuscularEndurance() < 4) {
             strengthnum += 4;
             num++;
         }
-        if (objective.equals("增强无氧耐力") && userTizhi.getMuscularEndurance() >= 4) {
+        if (Constants.IncAnaerobicTolerance.equals(objective) && userTizhi.getMuscularEndurance() >= 4) {
             strengthnum += 5;
             num++;
         }
-        if (objective.equals("缓解亚健康") && userTizhi.getPhysique() < 4) {
+        if (Constants.alleviatingSubHealth.equals(objective) && userTizhi.getPhysique() < 4) {
             strengthnum = 2;
             num++;
         }
-        if (objective.equals("缓解亚健康") && userTizhi.getPhysique() >= 4) {
+        if (Constants.alleviatingSubHealth.equals(objective) && userTizhi.getPhysique() >= 4) {
             strengthnum = 3;
             num++;
         }
-        if (objective.equals("缓解亚健康") && userTizhi.getHeartLungAbility() < 4) {
+        if (Constants.alleviatingSubHealth.equals(objective) && userTizhi.getHeartLungAbility() < 4) {
             strengthnum += 2;
             num++;
         }
-        if (objective.equals("缓解亚健康") && userTizhi.getHeartLungAbility() >= 4) {
+        if (Constants.alleviatingSubHealth.equals(objective) && userTizhi.getHeartLungAbility() >= 4) {
             strengthnum += 3;
             num++;
         }
-        if (objective.equals("缓解亚健康") && userTizhi.getMuscularEndurance() < 4) {
+        if (Constants.alleviatingSubHealth.equals(objective) && userTizhi.getMuscularEndurance() < 4) {
             strengthnum += 2;
             num++;
         }
-        if (objective.equals("缓解亚健康") && userTizhi.getMuscularEndurance() >= 4) {
+        if (Constants.alleviatingSubHealth.equals(objective) && userTizhi.getMuscularEndurance() >= 4) {
             strengthnum += 3;
             num++;
         }
@@ -254,37 +258,37 @@ public class RecimpeCore {
     }
 
     public int getSportTime() {
-        if (objective.equals("减脂瘦身")) {
+        if (Constants.loseWeight.equals(objective)) {
             if (userTizhi.getHeartLungAbility() < 3 || userTizhi.getPhysique() < 3) {
                 return 3;
             } else {
                 return 4;
             }
-        } else if (objective.equals("增肌")) {
+        } else if (Constants.gainMuscle.equals(objective)) {
             if (userTizhi.getHeartLungAbility() < 3 || userTizhi.getPhysique() < 3) {
                 return 2;
             } else {
                 return 1;
             }
-        } else if (objective.equals("增强心肺能力")) {
+        } else if (Constants.IncCardiopulmonary.equals(objective)) {
             if (userTizhi.getHeartLungAbility() < 3 || userTizhi.getPhysique() < 3) {
                 return 3;
             } else {
                 return 4;
             }
-        } else if (objective.equals("增强有氧耐力")) {
+        } else if (Constants.IncAerobicEndurance.equals(objective)) {
             if (userTizhi.getHeartLungAbility() < 3 || userTizhi.getPhysique() < 3) {
                 return 3;
             } else {
                 return 4;
             }
-        } else if (objective.equals("增强无氧耐力")) {
+        } else if (Constants.IncAnaerobicTolerance.equals(objective)) {
             if (userTizhi.getHeartLungAbility() < 3 || userTizhi.getPhysique() < 3) {
                 return 2;
             } else {
                 return 3;
             }
-        } else if (objective.equals("强身健体")) {
+        } else if (Constants.buildBody.equals(objective)) {
             if (userTizhi.getWithinFat() == 3) {
                 if (userTizhi.getHeartLungAbility() < 3 || userTizhi.getPhysique() < 3) {
                     return 4;
@@ -299,7 +303,7 @@ public class RecimpeCore {
                         return 4;
                     }
                 } else {
-                    if (userTizhi.getPhysique().equals("肥胖")) {
+                    if (Constants.fat.equals(userTizhi.getPhysique())) {
                         if (userTizhi.getHeartLungAbility() < 3 || userTizhi.getPhysique() < 3) {
                             return 3;
                         } else {
@@ -310,7 +314,7 @@ public class RecimpeCore {
                     }
                 }
             }
-        } else if (objective.equals("缓解亚健康")) {
+        } else if (Constants.alleviatingSubHealth.equals(objective)) {
             if (userTizhi.getHeartLungAbility() < 3 || userTizhi.getPhysique() < 3) {
                 return 3;
             } else {
@@ -323,29 +327,29 @@ public class RecimpeCore {
     }
 
     public int getSportFrequency(){
-        if (objective.equals("减脂瘦身")) {
+        if (Constants.loseWeight.equals(objective)) {
             return 3;
         }
-        if (objective.equals("增肌")) {
+        if (Constants.gainMuscle.equals(objective)) {
             return 2;
         }
-        if (objective.equals("增强心肺能力")) {
+        if (Constants.IncCardiopulmonary.equals(objective)) {
             return 2;
         }
-        if (objective.equals("增强有氧耐力")) {
+        if (Constants.IncAerobicEndurance.equals(objective)) {
             return 3;
         }
-        if (objective.equals("增强无氧耐力")) {
+        if (Constants.IncAnaerobicTolerance.equals(objective)) {
             return 2;
         }
-        if (objective.equals("强身健体")) {
+        if (Constants.buildBody.equals(objective)) {
             if (userTizhi.getWithinFat() == 3) {
                return 3;
             } else {
                 if (userTizhi.getHeartLungAbility() < 3) {
                     return 2;
                 } else {
-                    if (userTizhi.getPhysique().equals("肥胖")) {
+                    if (Constants.fat.equals(userTizhi.getPhysique())) {
                         return 3;
                     } else {
                         return 2;
@@ -353,32 +357,32 @@ public class RecimpeCore {
                 }
             }
         }
-        if (objective.equals("缓解亚健康")) {
+        if (Constants.alleviatingSubHealth.equals(objective)) {
             return 2;
         }
         return 2;
     }
 
     public String getStrengthShowType(){
-        if ("减脂瘦身".equals(objective)) {
+        if (Constants.loseWeight.equals(objective)) {
             return "心率";
         }
-        if ("增肌".equals(objective)) {
+        if (Constants.gainMuscle.equals(objective)) {
             return "组率";
         }
-        if ("增强心肺能力".equals(objective)) {
+        if (Constants.IncCardiopulmonary.equals(objective)) {
             return "心率";
         }
-        if ("增强有氧耐力".equals(objective)) {
+        if (Constants.IncAerobicEndurance.equals(objective)) {
             return "心率";
         }
-        if ("增强无氧耐力".equals(objective)) {
+        if (Constants.IncAnaerobicTolerance.equals(objective)) {
             return "组率";
         }
-        if ("强身健体".equals(objective)) {
+        if (Constants.buildBody.equals(objective)) {
             return "心率";
         }
-        if ("缓解亚健康".equals(objective)) {
+        if (Constants.alleviatingSubHealth.equals(objective)) {
             return "心率";
         }
         return "心率";

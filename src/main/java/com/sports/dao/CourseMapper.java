@@ -23,35 +23,26 @@ public interface CourseMapper {
 
     /**
      * 校验课程是否已经存在
-     * @param courseName
-     * @return
      */
     int chechCourseName(String courseName);
 
     /**
      * 查询出全部
-     * @return
      */
     List<Course> selectAll();
 
     /**
      * 按照name查询
-     * @param courseName
-     * @return
      */
     List<Course> selectByName( @Param("courseName") String courseName);
 
     /**
      * 按照name查询
-     * @param courseType
-     * @return
      */
     List<Course> selectByType( @Param("courseType") String courseType);
 
     /**
      * 按照id 获取视频Url
-     * @param id
-     * @return
      */
     Course getVideoUrl (Integer id);
 }

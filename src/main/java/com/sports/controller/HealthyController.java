@@ -1,16 +1,12 @@
 package com.sports.controller;
 
-import com.sports.common.Const;
 import com.sports.common.ServerResponse;
 import com.sports.entity.SportAbility;
 import com.sports.entity.Subhealthy;
-import com.sports.exception.UserException;
 import com.sports.service.HealthyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpSession;
 
 @RestController
 @RequestMapping("/healthy/")

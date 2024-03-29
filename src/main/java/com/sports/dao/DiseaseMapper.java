@@ -26,7 +26,6 @@ public interface DiseaseMapper {
 
     /**
      * 查询
-     * @return
      */
     List<Disease> selectAll();
 
@@ -34,8 +33,6 @@ public interface DiseaseMapper {
 
     /**
      * 校验 name不允许重复
-     * @param DiseaseName
-     * @return
      */
     int checkDiseaseName(String DiseaseName);
 }

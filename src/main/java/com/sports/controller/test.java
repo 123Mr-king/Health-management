@@ -4,27 +4,6 @@ import java.awt.event.*;
 import javax.swing.*;
 
 
-//public class test {
-//    static  boolean foo(char c){
-//        System.out.println(c);
-//        return true;
-//    }
-//    public static void main(String[] args){
-//        int i = 0;
-//        for (foo('B');foo('A')&&(i<2);foo('C'))
-//        {
-//            i++;
-//            foo('D');
-//        }
-//        int[] [] A =new int[][] {{1,2},{4,5},{7,8,10,11,12},{}};
-//        System.out.print(A.length);
-//        System.out.print(",");
-//        System.out.print(A[0].length);
-//        int x=1,y=2,z=3;
-//        System.out.println(y+=z--/++x);
-//    }
-//}
-
 
 
 public class test extends Frame implements ActionListener, WindowListener

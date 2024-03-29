@@ -1,5 +1,8 @@
 package com.sports.common;
 
+/**
+ * @author 小王小王 混世魔王
+ */
 public class Const {
 
     public static final String CURRENT_USER = "currentUser";

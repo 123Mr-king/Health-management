@@ -1,6 +1,9 @@
 package com.sports.common;
 
+
+
 /**
+ * @author 小王小王 混世魔王
  * 相应码
  */
 public enum ResponseCode {

@@ -24,8 +24,6 @@ public interface FatigueDegreeMapper {
 
     /**
      * 检测数据库中是否存在该疲劳度等级名
-     * @param FDname
-     * @return
      */
     int checkFDname(String FDname);
 

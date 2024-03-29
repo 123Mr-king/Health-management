@@ -38,8 +38,6 @@ public interface SportEquipmentMapper {
 
     /**
      * 校验 name不允许重复
-     * @param EquipmentName
-     * @return
      */
     int checkEquipmentName(String EquipmentName);
 

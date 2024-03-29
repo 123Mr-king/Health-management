@@ -20,16 +20,11 @@ public interface AdminUserMapper {
 
     /**
      * 检测用户名和密码是否匹配
-     * @param userName
-     * @param userPassword
-     * @return
      */
     AdminUser selectLogin(@Param("username") String userName, @Param("password") String userPassword);
 
     /**
      * 检测数据库中是否存在该用户名
-     * @param username
-     * @return
      */
     int checkUsername(String username);
 

@@ -6,10 +6,13 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import java.io.Serializable;
 
 /**
+ * @author 小王小王 混世魔王
+ *
  * 高复用的可响应对象
  * 保证序列化json的时候，如果是null的对象，key也会消失
  * @param <T>
  */
+
 @JsonSerialize
 public class ServerResponse<T> implements Serializable {
 

@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 import java.io.Serializable;
-
+/**
+ * @author 小王小王 混世魔王
+ */
 @Data
 @Configuration
 public class OSSConfig implements Serializable {

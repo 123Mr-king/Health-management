@@ -19,8 +19,6 @@ public interface SubhealthyMapper {
 
     /**
      * 通过userid查询是否存在该用户亚健康评测
-     * @param user_id
-     * @return
      */
     Subhealthy selectByUser_id(int user_id);
 }

@@ -21,14 +21,11 @@ public interface AgeGroupMapper {
 
     /**
      * 获取年龄段
-     * @return
      */
     List<AgeGroup> selectAll();
 
     /**
-     * 获取年龄段name
-     * @param id
-     * @return
+     * 获取年龄段
      */
     AgeGroup getNameById(Integer id);
 

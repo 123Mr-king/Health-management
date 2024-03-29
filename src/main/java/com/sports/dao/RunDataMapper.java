@@ -28,8 +28,6 @@ public interface RunDataMapper {
 
     /**
      * 根据id查询最新的数据 返回List类型
-     * @param userId
-     * @return
      */
     List<RunData> selectOneByUserId2(@Param("userId") Integer userId );
 

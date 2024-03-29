@@ -1,5 +1,6 @@
 package com.sports.tools;
 
+import com.sports.common.Constants;
 import com.sports.entity.Subhealthy;
 
 
@@ -40,7 +41,7 @@ public class CorporeityAssessment {
         int yangwoqizuoAssess=0;
 
             if(age<20){
-                if ("男".equals(sex)){
+                if (Constants.male.equals(sex)){
                     if(fuwocheng<10) {
                         fuwochengAssess= 1;
                     }else if(fuwocheng<18) {
@@ -67,7 +68,7 @@ public class CorporeityAssessment {
                     }
                 }
 
-                if ("男".equals(sex)){
+                if (Constants.male.equals(sex)){
                     if(yangwoqizuo<12) {
                         yangwoqizuoAssess= 1;
                     }else if(yangwoqizuo<21) {
@@ -94,7 +95,7 @@ public class CorporeityAssessment {
                     }
                 }
             }else if (age<30) {
-                if ("男".equals(sex)){
+                if (Constants.male.equals(sex)){
                     if(fuwocheng<9) {
                         fuwochengAssess= 1;
                     }else if(fuwocheng<16) {
@@ -121,7 +122,7 @@ public class CorporeityAssessment {
                 }
 
 
-                if ("男".equals(sex)){
+                if (Constants.male.equals(sex)){
                     if(yangwoqizuo<8) {
                         yangwoqizuoAssess= 1;
                     }else if(yangwoqizuo<16) {
@@ -148,7 +149,7 @@ public class CorporeityAssessment {
                     }
                 }
             }else if (age<40) {
-                if ("男".equals(sex)){
+                if (Constants.male.equals(sex)){
                     if(fuwocheng<7) {
                         fuwochengAssess= 1;
                     }else if(fuwocheng<12) {
@@ -175,7 +176,7 @@ public class CorporeityAssessment {
                 }
 
 
-                if ("男".equals(sex)){
+                if (Constants.male.equals(sex)){
                     if(yangwoqizuo<5) {
                         yangwoqizuoAssess= 1;
                     }else if(yangwoqizuo<10) {
@@ -202,7 +203,7 @@ public class CorporeityAssessment {
                     }
                 }
             }else {
-                if ("男".equals(sex)){
+                if (Constants.male.equals(sex)){
                     if(fuwocheng<4) {
                         fuwochengAssess= 1;
                     }else if(fuwocheng<8) {
@@ -229,7 +230,7 @@ public class CorporeityAssessment {
                 }
 
 
-                if ("男".equals(sex)){
+                if (Constants.male.equals(sex)){
                     if(yangwoqizuo<2) {
                         yangwoqizuoAssess= 1;
                     }else if(yangwoqizuo<7) {
@@ -285,7 +286,7 @@ public class CorporeityAssessment {
 
     public int getWithinFat(String sex,float userWaist,float userHipline){
         float assessmentNum=userWaist/userHipline;
-        if ("男".equals(sex)){
+        if (Constants.male.equals(sex)){
             if (assessmentNum<0.85){
                 return 0;
             }else if (assessmentNum<0.95){

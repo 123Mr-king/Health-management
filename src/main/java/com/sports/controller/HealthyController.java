@@ -17,7 +17,16 @@ public class HealthyController {
     @RequestMapping(value = "tizhi_evaluting.do", method = RequestMethod.POST)
     @Transactional
     @ResponseBody
-    public ServerResponse tizhi_evaluating(@RequestBody Subhealthy subhealthy,@RequestParam("disease_str") String disease_str, @RequestParam("user_height")float user_height, @RequestParam("user_weight")float user_weight, @RequestParam("user_optimal_rate1")int user_optimal_rate1, @RequestParam("user_optimal_rate2") int user_optimal_rate2, @RequestParam("user_chest") float user_chest, @RequestParam("user_waist") float user_waist,@RequestParam("user_hipline")  float user_hipline,@RequestParam("uid")  int uid) {
+    public ServerResponse tizhi_evaluating(@RequestBody Subhealthy subhealthy,
+                                           @RequestParam("disease_str") String disease_str,
+                                           @RequestParam("user_height")float user_height,
+                                           @RequestParam("user_weight")float user_weight,
+                                           @RequestParam("user_optimal_rate1")int user_optimal_rate1,
+                                           @RequestParam("user_optimal_rate2") int user_optimal_rate2,
+                                           @RequestParam("user_chest") float user_chest,
+                                           @RequestParam("user_waist") float user_waist,
+                                           @RequestParam("user_hipline")  float user_hipline,
+                                           @RequestParam("uid")  int uid) {
       ServerResponse response = healthyService.tizhi_evaluting(subhealthy,disease_str,user_height,user_weight,user_optimal_rate1,user_optimal_rate2,user_chest,user_waist,user_hipline,uid);
       return response ;
     }

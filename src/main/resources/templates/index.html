@@ -13,6 +13,7 @@
 <!-- Custom Css -->
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/color_skins.css">
+<link rel="stylesheet" href="css/reform.css">
 </head>
 
 <body class="theme-purple">
@@ -115,7 +116,6 @@
             </div>
         </li>        
         <li class="float-right">
-            <a href="javascript:void(0);" class="fullscreen hidden-sm-down" data-provide="fullscreen" data-close="true"><i class="zmdi zmdi-fullscreen"></i></a>
             <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="zmdi zmdi-settings zmdi-hc-spin"></i></a>
             <a href="#" class="mega-menu" onclick="exit()" data-close="true"><i onclick="exit()" class="zmdi zmdi-power"></i></a>
         </li>
@@ -126,12 +126,15 @@
 <!-- Left Sidebar -->
 <aside id="leftsidebar" class="sidebar">
 
-    <ul class="nav nav-tabs">
-        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#dashboard"><i class="zmdi zmdi-home m-r-5"></i>菜单</a></li>
-        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user"><i class="zmdi zmdi-account m-r-5"></i>我的</a></li>
-    </ul>
+<!--    改造 开始-->
+    <div class="shadowbox contentsBgOne">
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#dashboard" style="font-size: large; color: black"><i class="zmdi zmdi-home m-r-5"></i>菜单</a></li>
+            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#user" style="font-size: large; color: black"><i class="zmdi zmdi-account m-r-5"></i>我的</a></li>
+        </ul>
+    </div>
 
-    <div class="tab-content">
+    <div class="tab-content shadowbox contentsBgTwo" style="color: #0d97ff">
         <div class="tab-pane stretchRight active" id="dashboard">
             <div class="menu">
                 <ul class="list">
@@ -142,7 +145,7 @@
                                                                              style="margin: 0; position: relative;top: 2.5px;">directions_run</i><span>运动状态</span>
                     </a>
                     </li>
-                    <li><a href="body_status.html" class="menu-toggle"><i class="material-icons"
+                    <li class="active open"><a href="body_status.html" class="menu-toggle"><i class="material-icons"
                                                                           style="margin: 0; position: relative;top: 2.5px;">favorite</i><span>身体状态</span>
                     </a>
                     </li>
@@ -154,9 +157,10 @@
 
                     <li class="header" style="font-size: 17px; color:#009688 ;"><span
                             style="margin-left: 10px;color: #9932CC">运动</span></li>
-                    <li class="active open"><a href="prescription.html" class="menu-toggle"><i
+
+                    <li><a href="prescription.html" class="menu-toggle"><i
                             class="zmdi zmdi-assignment"></i><span>运动处方</span></a></li>
-                    <li><a href="javascript:void(0);" class="menu-toggle"><i
+                    <li><a href="run.html" class="menu-toggle"><i
                             class="zmdi zmdi-copy"></i><span>自主运动</span></a>
                         <ul class="ml-menu">
                             <li class="active"><a href="run.html">跑步</a></li>
@@ -246,6 +250,8 @@
         </div>
 
     </div>
+
+    <!--    改造 结束-->
 </aside>
 
 <!-- Right Sidebar -->
@@ -292,8 +298,12 @@
     	 <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="card">
                     <div class="header">
-                        <h3>  <small style="font-size: 18px;">由于您未完成<code>个人体质评测</code>，所以暂未为您生成运动处方，如果想要获得合适的运动处方，请您尽快完成相关评测。</small> </h3>
+                        <h3>  <small style="font-size: 18px;">您未完成
+                            <div class="typing">
+                            <code>个人体质评测</code></div>
+                            暂时未有运动方式推荐，请尽快完成相关评测。</small> </h3>
                     </div>
+
                     <div class="body">
                         <a class="btn btn-default btn-round waves-effect"  href="constitution_appraisal.html"> 立即评测 </a>
                     </div>

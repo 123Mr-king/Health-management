@@ -10,6 +10,7 @@ import com.sports.tools.Datetools;
 import com.sports.tools.RecimpeCore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,29 +33,21 @@ public class HealthyServiceImpl implements HealthyService {
 
     /**
      * 体测基础信息录入
-     * @param subhealthy
-     * @param disease_str
-     * @param user_height
-     * @param user_weight
-     * @param user_optimal_rate1
-     * @param user_optimal_rate2
-     * @param user_chest
-     * @param user_waist
-     * @param user_hipline
-     * @param uid
      * @return
      */
     @Override
-    public ServerResponse<String> tizhi_evaluting(Subhealthy subhealthy, String disease_str, float user_height, float user_weight,int user_optimal_rate1, int user_optimal_rate2, float user_chest, float user_waist, float user_hipline,int uid) {
+    public ServerResponse<String> tizhi_evaluting(Subhealthy subhealthy, String disease_str, float user_height, float user_weight,
+                                                  int user_optimal_rate1, int user_optimal_rate2, float user_chest,
+                                                  float user_waist, float user_hipline,int uid) {
         Subhealthy subhealthy_d=subhealthyMapper.selectByUser_id(uid);
 
         if(subhealthy_d==null){
             subhealthy.setUserId(uid);
-            int subhealthy_insert=subhealthyMapper.insert(subhealthy);
+            int insertNum =subhealthyMapper.insert(subhealthy);
         }else {
             subhealthy.setUserId(uid);
             subhealthy.setId(subhealthy_d.getId());
-            int subhealthy_update=subhealthyMapper.updateByPrimaryKey(subhealthy);
+            int updateNum =subhealthyMapper.updateByPrimaryKey(subhealthy);
         }
         subhealthy_d=subhealthyMapper.selectByUser_id(uid);
         User user=userMapper.selectByPrimaryKey(uid);
@@ -76,17 +69,16 @@ public class HealthyServiceImpl implements HealthyService {
 
     /**
      * 体测运动能力信息录入
-     * @param sportAbility
      * @return
      */
     @Override
     public ServerResponse<String> sportability_evaluting(SportAbility sportAbility) {
         SportAbility sportAbility_d= sportAbilityMapper.selectByUser_id(sportAbility.getUserId());
         if (sportAbility_d==null){
-            int sportAbility_insert=sportAbilityMapper.insert(sportAbility);
+            int insertNum=sportAbilityMapper.insert(sportAbility);
         }else {
             sportAbility.setId(sportAbility_d.getId());
-            int sportAbility_update=sportAbilityMapper.updateByPrimaryKeySelective(sportAbility);
+            int updateNum = sportAbilityMapper.updateByPrimaryKeySelective(sportAbility);
         }
         sportAbility_d=sportAbilityMapper.selectByUser_id(sportAbility.getUserId());
         User user=userMapper.selectByPrimaryKey(sportAbility.getUserId());

@@ -48,7 +48,7 @@ public class UserController {
         ServerResponse response = userService.login(userName, userPassword);
         if (response.isSuccess()) {
             session.setAttribute(Const.CURRENT_USER, response.getData());
-            //以秒为单位，即在没有活动30分钟后，session将失效
+            //30分钟后session将失效
             session.setMaxInactiveInterval(Const.SessionExtime.SESSION_EX_TIME);
         }
         return response;

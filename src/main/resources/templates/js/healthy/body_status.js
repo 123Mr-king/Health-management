@@ -3,7 +3,7 @@ function relation_network(){
     var myChart = echarts.init(document.getElementById('main'), 'macarons');
 //创建Nodes
     nodes=[
-        {category:0, name: '用户', label: 'xpf'},
+        {category:0, name: '我', label: 'wqw'},
         {category:1, name: '发育',value :""},
         {category:1, name: '体能',value :""},
         {category:1, name: '疾病',value :""},
@@ -31,7 +31,7 @@ function relation_network(){
         {category:2, name: '高',value :""},
         {category:3, name: '跑步',value :""},
         {category:3, name: '游泳',value :""},
-        {category:3, name: '乒乓球',value :""},
+        {category:3, name: '篮球',value :""},
         {category:3, name: '哑铃',value :""},
         {category:3, name: '杠铃',value :""},
         {category:3, name: '跳绳',value : ""},
@@ -40,11 +40,11 @@ function relation_network(){
     ];
 //创建links
     links=[
-        {source : '用户', target : '体质', weight : 1, name: 'include'},
-        {source : '用户', target : '运动处方', weight : 2, name: 'include'},
-        {source : '用户', target : '运动目标', weight : 2, name: 'include'},
-        {source : '用户', target : '兴趣爱好', weight : 2,name: 'include'},
-        {source : '用户', target : '运动器材', weight : 2,name: 'include'},
+        {source : '我', target : '体质', weight : 1, name: 'include'},
+        {source : '我', target : '运动处方', weight : 2, name: 'include'},
+        {source : '我', target : '运动目标', weight : 2, name: 'include'},
+        {source : '我', target : '兴趣爱好', weight : 2,name: 'include'},
+        {source : '我', target : '运动器材', weight : 2,name: 'include'},
         {source : '体质', target : '发育', weight : 2,name: 'include'},
         {source : '体质', target : '体能', weight : 2,name: 'include'},
         {source : '体质', target : '疾病', weight : 2,name: 'include'},
@@ -68,12 +68,12 @@ function relation_network(){
         {source : '运动目标', target : '减脂瘦身', weight : 2,name: 'is'},
         {source : '兴趣爱好', target : '跑步', weight : 2,name: 'has'},
         {source : '兴趣爱好', target : '游泳', weight : 2,name: 'has'},
-        {source : '兴趣爱好', target : '乒乓球', weight : 2,name: 'has'},
+        {source : '兴趣爱好', target : '篮球', weight : 2,name: 'has'},
         {source : '运动器材', target : '哑铃', weight : 2,name: 'has'},
         {source : '运动器材', target : '杠铃', weight : 2,name: 'has'},
         {source : '运动器材', target : '跳绳', weight : 2,name: 'has'},
     ];
-    var categories =[{name:"用户"},{name:"体质"},{name:"运动处方"},{name:"其他"}];
+    var categories =[{name:"我"},{name:"体质"},{name:"运动处方"},{name:"其他"}];
     option = {
         // 图的标题
         title: {
